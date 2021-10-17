@@ -375,3 +375,10 @@ a:hover {
   padding: 20px;
   align-items: center;
 }
+
+.red {
+  color: #c0392b;
+}
+.green {
+  color: #27ae60;
+}
