@@ -11,7 +11,7 @@ import {
 } from "@ant-design/icons/lib/icons";
 
 const Navbar = () => {
-  const [activeMenu, setActiveMenu] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(true);
   const [screenSize, setScreenSize] = useState(null);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const Navbar = () => {
     if (screenSize < 760) {
       setActiveMenu(false);
     } else {
-      setActiveMenu(false);
+      setActiveMenu(true);
     }
   }, [screenSize]);
 
@@ -46,28 +46,16 @@ const Navbar = () => {
       </div>
       {activeMenu && (
         <Menu theme="dark">
-          <Menu.Item
-            icon={<HomeOutlined />}
-            onClick={() => setActiveMenu(false)}
-          >
+          <Menu.Item icon={<HomeOutlined />}>
             <Link to="/">Home</Link>
           </Menu.Item>
-          <Menu.Item
-            icon={<FundOutlined />}
-            onClick={() => setActiveMenu(false)}
-          >
+          <Menu.Item icon={<FundOutlined />}>
             <Link to="/cryptocurrencies">Cryptocurrencies</Link>
           </Menu.Item>
-          <Menu.Item
-            icon={<MoneyCollectOutlined />}
-            onClick={() => setActiveMenu(false)}
-          >
+          <Menu.Item icon={<MoneyCollectOutlined />}>
             <Link to="/exchanges">Exchenges</Link>
           </Menu.Item>
-          <Menu.Item
-            icon={<BulbOutlined />}
-            onClick={() => setActiveMenu(false)}
-          >
+          <Menu.Item icon={<BulbOutlined />}>
             <Link to="/news">News</Link>
           </Menu.Item>
         </Menu>
